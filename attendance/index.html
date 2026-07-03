@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Attendance Management</h1>
+      <p>Manage your students' daily attendance (CRUD)</p>
+    </header>
+
+    <section class="add-student-section">
+      <form id="student-form">
+        <input type="text" id="student-name" placeholder="Enter student name..." required>
+        <select id="student-status">
+          <option value="Present">Present</option>
+          <option value="Absent">Absent</option>
+          <option value="Late">Late</option>
+        </select>
+        <button type="submit" class="btn-add">Add Student</button>
+      </form>
+    </section>
+
+    <section class="summary-section">
+      <div class="stat-box">Total: <span id="total-count">0</span></div>
+      <div class="stat-box present-box">Present: <span id="present-count">0</span></div>
+      <div class="stat-box absent-box">Absent: <span id="absent-count">0</span></div>
+      <div class="stat-box late-box">Late: <span id="late-count">0</span></div>
+    </section>
+
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="student-table-body">
+          </tbody>
+      </table>
+    </section>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

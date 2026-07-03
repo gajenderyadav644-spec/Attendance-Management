@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #f4f7f6;
+  --text-color: #333;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  
+  --primary: #4a90e2;
+  --present: #2ecc71;
+  --absent: #e74c3c;
+  --late: #f39c12;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #777;
+}
+
+/* --- Form (Create) --- */
+form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input[type="text"], select {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+input[type="text"] {
+  flex: 2;
+}
+
+select {
+  flex: 1;
+}
+
+.btn-add {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #357abd;
+}
+
+/* --- Summary Stats --- */
+.summary-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-box {
+  flex: 1;
+  background: var(--bg-color);
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+}
+
+.present-box { border-bottom: 4px solid var(--present); }
+.absent-box { border-bottom: 4px solid var(--absent); }
+.late-box { border-bottom: 4px solid var(--late); }
+
+/* --- Table (Read, Update, Delete) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--bg-color);
+  font-weight: 600;
+}
+
+/* Status dropdown inside the table */
+.status-select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-present { color: var(--present); }
+.status-absent { color: var(--absent); }
+.status-late { color: var(--late); }
+
+.btn-delete {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #e60000;
+}
